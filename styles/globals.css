@@ -16,6 +16,8 @@ a {
 }
 
 :root {
+  /* border-radius */
+  --border-radius: 15px;
 
   /* font-size */
   --fs-xxs: .75rem;
