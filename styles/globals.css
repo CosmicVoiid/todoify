@@ -14,3 +14,67 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+
+  /* font-size */
+  --fs-xxs: .75rem;
+  --fs-xs: .875rem;
+  --fs-s: 1rem;
+  --fs-sm: 1.125rem;
+  --fs-m: 1.25rem;
+  --fs-ml: 1.5rem;
+  --fs-l: 1.875rem;
+  --fs-xl: 2.25rem;
+  --fs-xxl: 3rem;
+  --fs-xxxl: 4.5rem;
+
+  /* primary colors */
+  --color-orange-900: #803100;
+  --color-orange-800: #994000;
+  --color-orange-700: #E56B00;
+  --color-orange-600: #FF8C1A;
+  --color-orange-500: #FFA921;
+  --color-orange-400: #FFC94D;
+  --color-orange-300: #FFE799;
+  --color-orange-200: #FFF9CC;
+  --color-orange-100: #FFFEF0;
+
+  /* neutral colors */
+  --color-grey-900: hsl(215, 22%, 17%);
+  --color-grey-800: hsl(215, 17%, 30%);
+  --color-grey-700: hsl(214, 11%, 49%);
+  --color-grey-600: hsl(215, 17%, 63%);
+  --color-grey-500: hsl(209, 24%, 74%);
+  --color-grey-400: hsl(208, 17%, 83%);
+  --color-grey-300: hsl(210, 24%, 87%);
+  --color-grey-200: hsl(207, 22%, 90%);
+  --color-grey-100: hsl(210, 17%, 98%);
+
+  /* accent colors green */
+  --color-green-700: hsl(179, 59%, 17%);
+  --color-green-600: hsl(174, 58%, 25%);
+  --color-green-500: hsl(174, 55%, 37%);
+  --color-green-400: hsl(174, 49%, 46%);
+  --color-green-300: hsl(178, 57%, 64%);
+  --color-green-200: hsl(177, 67%, 80%);
+  --color-green-100: hsl(178, 100%, 95%);
+
+  /* accent colors yellow */
+  --color-yellow-700: hsl(44, 66%, 22%);
+  --color-yellow-600: hsl(43, 64%, 34%);
+  --color-yellow-500: hsl(44, 57%, 52%);
+  --color-yellow-400: hsl(42, 87%, 67%);
+  --color-yellow-300: hsl(44, 90%, 80%);
+  --color-yellow-200: hsl(44, 90%, 92%);
+  --color-yellow-100: hsl(44, 100%, 98%);
+
+  /* accent colors red */
+  --color-red-700: hsl(0, 60%, 24%);
+  --color-red-600: hsl(0, 67%, 32%);
+  --color-red-500: hsl(0, 70%, 42%);
+  --color-red-400: hsl(0, 71%, 53%);
+  --color-red-300: hsl(0, 70%, 64%);
+  --color-red-200: hsl(0, 79%, 81%);
+  --color-red-100: hsl(0, 77%, 95%);
+}
