@@ -17,7 +17,13 @@ const colors = {
 	},
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+	colors,
+	fonts: {
+		heading: "Livvic, system-ui, sans-serif",
+		body: "Livvic, system-ui, sans-serif",
+	},
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
