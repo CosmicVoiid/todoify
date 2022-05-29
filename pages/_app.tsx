@@ -23,6 +23,19 @@ const theme = extendTheme({
 		heading: "Livvic, system-ui, sans-serif",
 		body: "Livvic, system-ui, sans-serif",
 	},
+	components: {
+		Button: {
+			baseStyle: {
+				borderRadius: "15px",
+			},
+			variants: {
+				brand: {
+					bg: "brand.500",
+					color: "white",
+				},
+			},
+		},
+	},
 });
 
 function MyApp({ Component, pageProps }: AppProps) {

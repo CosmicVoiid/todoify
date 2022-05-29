@@ -50,16 +50,19 @@ const Home: NextPage = () => {
 				</Flex>
 				<Box>
 					<VStack mt="8.25rem" spacing={-1}>
-						<Heading fontWeight="600">Todoify</Heading>
-						<Heading fontWeight="600">your life</Heading>
+						<Heading fontSize="2rem" fontWeight="600">
+							Todoify
+						</Heading>
+						<Heading fontSize="2rem" fontWeight="600">
+							your life
+						</Heading>
 					</VStack>
 					<Flex justify="center">
 						<Link href="/signup">
 							<Button
 								mt="1rem"
 								borderRadius="15px"
-								bg="brand.500"
-								color="white"
+								variant="brand"
 								filter="drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"
 							>
 								Get Started

@@ -8,19 +8,19 @@ describe("Home", () => {
 	});
 
 	it("renders a login button", () => {
-		const loginButton = screen.getByText("Log In");
+		const loginButton = screen.getByText(/log in/i);
 
 		expect(loginButton).toBeInTheDocument();
 	});
 
 	it("renders a signup button", () => {
-		const signupButton = screen.getByText("Sign Up");
+		const signupButton = screen.getByText(/sign up/i);
 
 		expect(signupButton).toBeInTheDocument();
 	});
 
 	it("renders a get started button", () => {
-		const getStartedButton = screen.getByText("Get Started");
+		const getStartedButton = screen.getByText(/get started/i);
 
 		expect(getStartedButton).toBeInTheDocument();
 	});
