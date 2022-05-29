@@ -90,7 +90,7 @@ const validate = (values: Values) => {
 	if (!values.password) {
 		errors.passwordVal = "Password required";
 	} else if (!values.passwordConfirm) {
-		errors.passwordVal = "Please confirm password";
+		errors.passwordVal = "Please confirm your password";
 	} else if (values.password !== values.passwordConfirm) {
 		errors.passwordVal = "Passwords must match";
 	}
