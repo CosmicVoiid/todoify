@@ -1,11 +1,13 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-// import EmailProvider from "next-auth/providers/email"
+import CredentialsProvider from "next-auth/providers/credentials";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import prisma from "../../../lib/prisma";
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
 export default NextAuth({
-	// https://next-auth.js.org/configuration/providers
+	adapter: PrismaAdapter(prisma),
 	providers: [
 		// EmailProvider({
 		//   server: process.env.EMAIL_SERVER,

@@ -103,6 +103,16 @@ const validate = (values: Values) => {
 };
 
 const Signup: NextPage = () => {
+	type Values = {
+		firstName: String;
+		lastName: String;
+		name: String;
+		email: String;
+		password: String;
+		passwordConfirm: String;
+		passwordVal: String;
+	};
+
 	const formik = useFormik({
 		initialValues: {
 			firstName: "",
@@ -115,9 +125,32 @@ const Signup: NextPage = () => {
 		},
 		validate,
 		onSubmit: (values) => {
-			alert(JSON.stringify(values, null, 2));
+			handleSignup(values);
 		},
 	});
+
+	const handleSignup = async (values: Values) => {
+		try {
+			const body = {
+				first_name: values.firstName,
+				last_name: values.lastName,
+				email: values.email,
+				password: values.password,
+				password_confirm: values.passwordConfirm,
+			};
+			const response = await fetch("/api/signup", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(body),
+			});
+
+			if (response.status !== 200) {
+				console.log(`Error: response status of ` + response.status);
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
 	return (
 		<main>

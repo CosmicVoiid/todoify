@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { body, check, validationResult } from "express-validator";
+import { body, validationResult } from "express-validator";
 import prisma from "../../lib/prisma";
 import bcrypt from "bcryptjs";
 import initMiddleware from "../../lib/init-middleware";
