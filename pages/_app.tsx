@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/globals.css";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { SessionProvider } from "next-auth/react";
 
 const colors = {
 	brand: {
@@ -38,16 +39,18 @@ const theme = extendTheme({
 	},
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 	return (
-		<ChakraProvider theme={theme}>
-			<Head>
-				<title>Todoify</title>
-				<meta name="Todoify App" content="Create todo lists" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<Component {...pageProps} />
-		</ChakraProvider>
+		<SessionProvider session={session} refetchInterval={5 * 60}>
+			<ChakraProvider theme={theme}>
+				<Head>
+					<title>Todoify</title>
+					<meta name="Todoify App" content="Create todo lists" />
+					<link rel="icon" href="/favicon.ico" />
+				</Head>
+				<Component {...pageProps} />
+			</ChakraProvider>
+		</SessionProvider>
 	);
 }
 

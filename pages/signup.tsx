@@ -79,6 +79,8 @@ const validate = (values: Values) => {
 
 	if (!values.password) {
 		errors.password = "Required";
+	} else if (values.password.length < 6) {
+		errors.password = "Password must be atleast 6 characters";
 	}
 
 	if (!values.passwordConfirm) {
@@ -89,6 +91,8 @@ const validate = (values: Values) => {
 
 	if (!values.password) {
 		errors.passwordVal = "Password required";
+	} else if (values.password.length < 6) {
+		errors.passwordVal = "Password must be atleast 6 characters";
 	} else if (!values.passwordConfirm) {
 		errors.passwordVal = "Please confirm your password";
 	} else if (values.password !== values.passwordConfirm) {
